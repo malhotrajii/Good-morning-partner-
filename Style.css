@@ -1,0 +1,124 @@
+/* Main container to control the overall layout */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe6ea;
+}
+
+/* Animations for different elements */
+
+/* Background gradient animation */
+rect:nth-of-type(1) {
+  animation: gradientAnimation 5s infinite;
+}
+
+/* Pulsing border */
+rect:nth-of-type(2) {
+  animation: pulseBorder 2s infinite;
+}
+
+/* Animated floating hearts */
+use:nth-of-type(1) {
+  animation: floatingHeart1 7s infinite, fadeHeart1 7s infinite;
+}
+
+use:nth-of-type(2) {
+  animation: floatingHeart2 8s infinite, fadeHeart2 8s infinite;
+}
+
+use:nth-of-type(3) {
+  animation: floatingHeart3 6s infinite, fadeHeart3 6s infinite;
+}
+
+/* Title glowing effect */
+text:nth-of-type(1) {
+  animation: glowingText 3s infinite;
+}
+
+/* Main heart with beat animation */
+path:nth-of-type(3) {
+  animation: beatHeart 2s infinite, fadeHeart 2s infinite;
+}
+
+/* Pulse animation for smaller hearts */
+path:nth-of-type(4), path:nth-of-type(5), path:nth-of-type(6) {
+  animation: smallHeartPulse 3s infinite;
+}
+
+/* Keyframe Animations */
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { fill: #ffe6ea; }
+  50% { fill: #ffd6e0; }
+  100% { fill: #ffe6ea; }
+}
+
+/* Pulsing border */
+@keyframes pulseBorder {
+  0% { stroke-width: 2; }
+  50% { stroke-width: 4; }
+  100% { stroke-width: 2; }
+}
+
+/* Floating heart animations */
+@keyframes floatingHeart1 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(100px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatingHeart2 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(100px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatingHeart3 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(100px); }
+  100% { transform: translateY(0); }
+}
+
+/* Fade effect for hearts */
+@keyframes fadeHeart1 {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+@keyframes fadeHeart2 {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+@keyframes fadeHeart3 {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+/* Glowing effect for text */
+@keyframes glowingText {
+  0% { fill: #8b4513; }
+  50% { fill: #a0522d; }
+  100% { fill: #8b4513; }
+}
+
+/* Heart beat effect */
+@keyframes beatHeart {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* Pulse effect for smaller hearts */
+@keyframes smallHeartPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
